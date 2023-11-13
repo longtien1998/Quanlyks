@@ -51,3 +51,10 @@ function room_exist_LoaiPhong_update($maPhong, $LoaiPhong)
     $sql = "SELECT count(*) FROM room WHERE  maPhong!=? and LoaiPhong=?";
     return pdo_query_value($sql, $maPhong, $LoaiPhong) > 0;
 }
+
+//vidu
+
+{
+    $sql = "SELECT count(*) FROM room WHERE  maPhong!=? and LoaiPhong=?";
+    return pdo_query_value($sql, $maPhong, $LoaiPhong) > 0;
+}

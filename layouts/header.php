@@ -11,13 +11,14 @@
     <script src="../content/js/room.js"></script>
     <link rel="stylesheet" href="../content/css/main.css">
     <link rel="stylesheet" href="../content/css/room.css">
+    <link rel="stylesheet" href="../content/css/login_re.css">
 
     <script src="https://kit.fontawesome.com/db4ae7b83e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- <div class="container-fluid"> -->
-        <div class=" border-bottom p-2">
-            <div class="row col-lg-12">
+        <div class="row border-bottom p-2">
+            <div class="row col-lg-9">
                 <div class="mx-3">
                     <a href="https://maps.app.goo.gl/fh5dNJN5qoVMQett6" target="_blank">
                         <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
@@ -29,6 +30,13 @@
                         <i class="fa-solid fa-phone-volume" style="color: #000000;"></i>
                         Liên hệ trực tiếp với chúng tôi tại (+84) 982 268 784
                     </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+            <div class="mx-3 ml-4">
+                <span>Xin Chào</span>
+                <i class="fa-regular fa-circle-user fa-flip" style="color: #050505; font-size: 25px;"></i>
+                    <a href="/index.php?action=login">Đăng nhập</a>
                 </div>
             </div>
         </div>

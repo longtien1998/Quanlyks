@@ -25,7 +25,7 @@
   </div>
 </div>
 <section class="order-1 container-fluid">
-  <div class="main_container border border-warning px-1 py-4 w-75 m-auto bg-light">
+  <div class="border border-warning px-1 py-4 w-75 m-auto bg-light">
     <form action="" class="row justify-content-around">
       <div class="form-group">
         <label for="" class="col-form-label">Ngày đến:</label>

@@ -1,4 +1,5 @@
 <?php 
+/* 
     function getData($sql) {
         $conn = connect_db();
         $stmt = $conn->prepare($sql);
@@ -24,7 +25,7 @@
     }
  
     function pdo_execute($sql)
-{
+ {
     $sql_args = array_slice(func_get_args(), 1);
     try {
         $conn = connect_db();
@@ -84,5 +85,8 @@ function pdo_query_value($sql)
     } finally {
         unset($conn);
     }
-}
-?>
+} */
+
+
+?> 
+

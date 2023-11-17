@@ -1,12 +1,12 @@
 <div class="container-fluid pt-5">
         <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Sign Up</span></h2>
+            <h2 class="section-title px-5"><span class="px-2">ĐĂNG NHẬP</span></h2>
         </div>
         <div class="text-center mb-4 ">
             
         </div>
         <div class="main_container">
-            <form action="" method="POST" class="form-login" id="form-1">
+            <form action="../dao/login.php" method="POST" class="form-login" id="form-1">
                 <div class="form-header">
                     <h3 class="form-heading">ĐĂNG NHẬP</h3>
                 </div>

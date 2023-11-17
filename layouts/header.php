@@ -1,3 +1,33 @@
+
+<?php 
+    session_start() ;
+    include './config/connect.php';
+    include './thuvien/user.php';
+?>
+
+<?php
+// khởi tạo biên session
+
+// session_start();
+// kiểm tra xem sessionuser có tồn tại không ?
+$user = '<a href="/index.php?action=login">Đăng nhập</a>';
+ if (isset($_SESSION["user"])) {
+    
+
+    // Thực thi truy vấn
+    $result = userkhachhang($_SESSION["user"]);
+
+    // Kiểm tra kết quả trả về
+    if (mysqli_num_rows($result) > 0) {
+
+        // Lấy thông tin người dùng từ cơ sở dữ liệu
+        $user= $_SESSION["user"] . ' <a href="/index.php?action=logout">Đăng xuất</a>';
+    } else {
+        $user= $_SESSION["user"] . '<br> <a href="logout.php"  tite="Logout">Logout.</a> </div>';
+    }
+} else  $user = '<a href="/index.php?action=login">Đăng nhập</a>'; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +66,8 @@
             <div class="mx-3 ml-4">
                 <span>Xin Chào</span>
                 <i class="fa-regular fa-circle-user fa-flip" style="color: #050505; font-size: 25px;"></i>
-                    <a href="/index.php?action=login">Đăng nhập</a>
+                    <!-- <a href="/index.php?action=login">Đăng nhập</a> -->
+                    <?php echo $user; ?>
                 </div>
             </div>
         </div>

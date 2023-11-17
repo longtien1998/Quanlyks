@@ -1,3 +1,4 @@
+
 <?php include './layouts/header.php'; ?>
 
 <?php
@@ -24,6 +25,9 @@
             break;
         case 'register':
             include './pages/register.php';
+            break;
+        case 'logout':
+            include './pages/logout.php';
             break;
         default:
             include './pages/home.php';

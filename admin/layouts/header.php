@@ -1,6 +1,7 @@
 <?php
-    
-    
+    include "../config/connect.php";
+    include "../dao/pdo.php";
+    include "./dao/userDAO.php";
     session_start();
 ?>
 
@@ -15,7 +16,8 @@
   <!-- Main CSS-->
   <!-- <link rel="stylesheet" type="text/css" href="/public/bootstrap.css"> -->
   <link rel="stylesheet" type="text/css" href="/admin/content-admin/css/main.css">
-
+  <link rel="stylesheet" href="/content/css/login_re.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <!-- or -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -37,7 +39,7 @@
 
 
       <!-- User Menu-->
-      <li><a class="app-nav__item" href="/index.html"><i class='bx bx-log-out bx-rotate-180'></i> </a>
+      <li><a class="app-nav__item" href="/dao/logout.php"><i class='bx bx-log-out bx-rotate-180'></i> </a>
 
       </li>
     </ul>
@@ -57,7 +59,7 @@
       
       <li><a class="app-menu__item active" href="/admin/index.php"><i class='app-menu__icon bx bx-tachometer'></i><span
             class="app-menu__label">Bảng điều khiển</span></a></li>
-      <li><a class="app-menu__item " href="table-data-table.html"><i class='app-menu__icon bx bx-id-card'></i> <span
+      <li><a class="app-menu__item " href="/admin/index.php?controller=user-admin"><i class='app-menu__icon bx bx-id-card'></i> <span
             class="app-menu__label">Quản lý nhân viên</span></a></li>
       <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-user-voice'></i><span
             class="app-menu__label">Quản lý khách hàng</span></a></li>

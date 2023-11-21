@@ -1,4 +1,7 @@
-<?php include '../admin/layouts/header.php' ?>
+<?php
+
+
+include '../admin/layouts/header.php' ?>
 <?php 
 if(!isset($_GET["action"])) $_GET["action"] = "index";
 if(!isset($_GET["controller"])) $_GET["controller"] = "dashboard";

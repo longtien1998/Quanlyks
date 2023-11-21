@@ -1,7 +1,7 @@
 <?php 
-/* 
+
     function getData($sql) {
-        $conn = connect_db();
+        $conn = connect_pdo();
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
@@ -9,7 +9,7 @@
     }
     
     function getDataWidthParams($sql, $params) {
-        $conn = connect_db();
+        $conn = connect_pdo();
         $stmt = $conn->prepare($sql);
         $stmt->execute($params);
         $result = $stmt->fetchAll();
@@ -17,7 +17,7 @@
     }
     
     function executeCUD($sql, $params) {
-        $conn = connect_db();
+        $conn = connect_pdo();
         $stmt = $conn->prepare($sql);
         $stmt->execute($params);
         $count = $stmt->rowCount();
@@ -28,7 +28,7 @@
  {
     $sql_args = array_slice(func_get_args(), 1);
     try {
-        $conn = connect_db();
+        $conn = connect_pdo();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
     } catch (PDOException $e) {
@@ -42,9 +42,10 @@ function pdo_query($sql)
 {
     $sql_args = array_slice(func_get_args(), 1);
     try {
-        $conn = connect_db();
+        $conn = connect_pdo();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $rows = $stmt->fetchAll();
         return $rows;
     } catch (PDOException $e) {
@@ -59,7 +60,7 @@ function pdo_query_one($sql)
 {
     $sql_args = array_slice(func_get_args(), 1);
     try {
-        $conn = connect_db();
+        $conn = connect_pdo();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -75,7 +76,7 @@ function pdo_query_value($sql)
 {
     $sql_args = array_slice(func_get_args(), 1);
     try {
-        $conn =connect_db();
+        $conn =connect_pdo();
         $stmt = $conn->prepare($sql);
         $stmt-> execute($sql_args);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -85,7 +86,7 @@ function pdo_query_value($sql)
     } finally {
         unset($conn);
     }
-} */
+} 
 
 
 ?> 

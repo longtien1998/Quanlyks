@@ -1,6 +1,6 @@
     
     </main>
-    <footer class="footer text-center text-muted">&copy; - Hostel Management System - Developed by <a href="">Coder</a></footer>
+    <footer class="footer text-center text-muted">&copy; - Hostel Management System - Developed by <a href="">Coder Tôn Long Tiến</a></footer>
 
   <!--===============================================================================================-->
   <script type="text/javascript">

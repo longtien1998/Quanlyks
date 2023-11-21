@@ -31,6 +31,10 @@
                     Bạn chưa là Nhân Viên BONCHA - Best Hotel? <br>
                     <a href="/index.php?action=home" class="register-link">Quay lại trang chủ</a>
                 </p>
+                <p class="register">
+                    Bạn chưa là khách hàng BONCHA - Best Hotel? <br>
+                    <a href="/index.php?action=register" class="register-link">Đăng ký</a>
+                </p>
             </form>
             <div class="icon">
                 <img src="" alt="">

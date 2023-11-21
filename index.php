@@ -27,7 +27,7 @@
             include './pages/register.php';
             break;
         case 'logout':
-            include './pages/logout.php';
+            include './dao/logout.php';
             break;
         default:
             include './pages/home.php';

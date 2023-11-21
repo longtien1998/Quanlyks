@@ -8,7 +8,7 @@
         </div>
         
         <div class="main_container">
-            <form action="" method="POST" class="form-login" id="form-1">
+            <form action="../dao/register.php" method="POST" class="form-login" id="form-1">
                 <div class="form-header">
                     <h3 class="form-heading">ĐĂNG KÝ</h3>
                 </div>

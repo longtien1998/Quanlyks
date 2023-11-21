@@ -16,5 +16,4 @@
       // echo "Connected successfully";
       return $conn;
   }
-  $message ="";
 ?>

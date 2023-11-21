@@ -1,15 +1,15 @@
-<?php include './layouts/header.php' ?>
+<?php include '../admin/layouts/header.php' ?>
 <?php 
 if(!isset($_GET["action"])) $_GET["action"] = "index";
 if(!isset($_GET["controller"])) $_GET["controller"] = "dashboard";
 switch ($_GET["controller"]) {
-    case 'users':
+    case 'user-admin':
         switch ($_GET["action"]) {
             case 'index':
-                include './pages/users/index.php';
+                include './pages/users-admin/index.php';
                 break;
-            case 'new':
-                include './pages/users/new.php';
+            case 'new-admin':
+                include './pages/users-admin/new.php';
                 break;
             
             default:

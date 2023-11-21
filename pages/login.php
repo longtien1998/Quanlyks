@@ -28,8 +28,8 @@
                 <button class="form-submit" type="submit" name="dangnhap">Đăng nhập</button>
 
                 <p class="register">
-                    Bạn chưa là khách hàng BONCHA - Best Hotel? <br>
-                    <a href="/index.php?action=register" class="register-link">Đăng ký</a>
+                    Bạn chưa là Nhân Viên BONCHA - Best Hotel? <br>
+                    <a href="/index.php?action=home" class="register-link">Quay lại trang chủ</a>
                 </p>
             </form>
             <div class="icon">

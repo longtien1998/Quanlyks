@@ -14,7 +14,7 @@
                     <label for="username" class="form-label">Tên đăng nhập</label>
                     <input id="username" name="username" type="text" placeholder="VD: longtien1998" class="form-control1" required>
                     <i class="fa-solid fa-user form-user"></i>
-                    <span class="form-message"></span>
+                    <!-- <span class="form-message"><?php echo $_SESSION['message'] ;?></span> -->
                 </div>
 
                 <div class="form-group">

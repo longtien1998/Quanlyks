@@ -1,11 +1,13 @@
 <?php 
 
 include '../config/connect.php';
-include '../thuvien/user.php';?>
+include '../thuvien/user.php';
+
+?>
+
 <?php
 
 session_start();
-$message = "";
 
 // Kiểm tra nút Đăng nhập đã được nhấn hay chưa
 if (isset($_POST["dangnhap"])) {
@@ -14,28 +16,29 @@ if (isset($_POST["dangnhap"])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     // echo $password;
-    $result=userkhachhang($username);
+    $result=useradmin($username);
     // Kiểm tra kết quả trả về
     if (mysqli_num_rows($result) > 0) {
 
         // Lấy thông tin người dùng từ cơ sở dữ liệu
         $row = mysqli_fetch_assoc($result);
         // Kiểm tra mật khẩu hợp lệ
-        if ($row['matKhau'] === $password) {
+        if ($row['password'] === $password) {
             // Đăng nhập thành công và set user name vào biến session
             $_SESSION["user"] = "$username";
             header("Location: /index.php?action=home");
         } else {
             // sai mk
             
-            $message = ' <h2 class="section-title px-5"><span class="px-2">Sai mật khẩu. Vui lòng thử lại</span></h2>';
+             echo ' <script> alert("Sai mật khẩu. Vui lòng thử lại"); </script>';
         }
     } else {
         // Kiểm tra kết quả trả về
-        if (usernhanvien($username) > 0) {
+        $result1 =usernhanvien($username);
+        if ( mysqli_num_rows($result1)> 0) {
 
             // Lấy thông tin người dùng từ cơ sở dữ liệu
-            $row = mysqli_fetch_assoc($result);
+            $row = mysqli_fetch_assoc($result1);
             // Kiểm tra mật khẩu hợp lệ
             if ($row['password'] === $password) {
                 // Đăng nhập thành công và set user name vào biến session
@@ -44,20 +47,20 @@ if (isset($_POST["dangnhap"])) {
             } else {
                 // sai mk
                 
-                $message = ' <h2 class="section-title px-5" style="color: red;"><span class="px-2">Sai mật khẩu. Vui lòng thử lại</span></h2>';
+                $message = ' <script> alert("Sai mật khẩu. Vui lòng thử lại"); </script>';
             }
         } else {
 
             // Người dùng không tồn tại
             
-            $message = ' <h2 class="section-title px-5" style="color: red;"><span class="px-2">Người dùng không tồn tại!</span></h2>';
+            $message = ' <script> alert("Người dùng không tồn tại!"); </script>';
         }
     }
 }
 
 
 // Đóng kết nối
-
-mysqli_close($conn);
+$_SESSION["message"] = "$message";
+// mysqli_close($conn);
 
 ?>

@@ -167,3 +167,10 @@ img {
 .border-2{
   border: 10px solid rgb(233, 233, 233);
 }
+.user:hover a{
+  display: block;
+}
+.user{
+  font-weight: 700;
+  color: brown;
+}

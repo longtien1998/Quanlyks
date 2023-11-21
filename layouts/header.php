@@ -15,15 +15,15 @@ $user = '<a href="/index.php?action=login">Đăng nhập</a>';
     
 
     // Thực thi truy vấn
-    $result = userkhachhang($_SESSION["user"]);
+    $result = useradmin($_SESSION["user"]);
 
     // Kiểm tra kết quả trả về
     if (mysqli_num_rows($result) > 0) {
 
         // Lấy thông tin người dùng từ cơ sở dữ liệu
-        $user= $_SESSION["user"] . ' <a href="/index.php?action=logout">Đăng xuất</a>';
+        $user= 'Admin <a class="user" href="/admin/index.php">'.$_SESSION["user"] . '</a> <a href="/index.php?action=logout">Đăng xuất</a>';
     } else {
-        $user= $_SESSION["user"] . '<br> <a href="logout.php"  tite="Logout">Logout.</a> </div>';
+        $user='Nhân Viên <a class="user" href="/admin/index.php">'.$_SESSION["user"] . '</a> <a href="/index.php?action=logout">Đăng xuất</a>';
     }
 } else  $user = '<a href="/index.php?action=login">Đăng nhập</a>'; 
 ?>

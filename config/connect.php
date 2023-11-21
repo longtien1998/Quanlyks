@@ -1,20 +1,20 @@
 <?php
-function connect_db()
-{   
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "quanlykhachsan";
+  function connect_db() {   
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "quanlykhachsan";
 
-    
-    // Create connection
-    $conn = new mysqli($servername, $username, $password,$dbname);
-    
-    // Check connection
-    if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-    }
-    // echo "Connected successfully";
-    return $conn;
-}
+      
+      // Create connection
+      $conn = new mysqli($servername, $username, $password,$dbname);
+      
+      // Check connection
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+      // echo "Connected successfully";
+      return $conn;
+  }
+  $message ="";
 ?>

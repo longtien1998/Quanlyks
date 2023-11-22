@@ -4,6 +4,7 @@
         $conn = connect_pdo();
         $stmt = $conn->prepare($sql);
         $stmt->execute();
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $result = $stmt->fetchAll();
         return $result;
     }

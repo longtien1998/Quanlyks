@@ -10,16 +10,15 @@ function nhanvien_update($maNhanVien, $tenNhanVien, $congViec, $ngaylamViec, $ca
     $sql = "UPDATE nhanvien SET tenNhanVien=?,congVie=?,ngaylamViec=?,caLamViec=?,Id_KhachSan=?,vai_tro=? WHERE maNhanVien=?";
     pdo_execute($sql, $tenNhanVien, $congViec, $ngaylamViec, $caLamViec, $Id_KhachSan == 1, $maNhanVien);
 }
-function nhanvien_delete($maNhanVien)
+function nhanvien_delete($getmanhanvien)
 {
     $sql = "DELETE FROM nhanvien WHERE maNhanVien=?";
-    if (is_array($maNhanVien)) {
-        foreach ($maNhanVien as $ma) {
-            pdo_execute($sql, $ma);
+    
+        $data = pdo_execute($sql, $getmanhanvien);
+        if($data>0){
+            var_dump($data);
         }
-    } else {
-        pdo_execute($sql, $maNhanVien);
-    }
+    
 }
 function nhanvien_select_all()//truy vấn và trả về all kh từ csdl
 {

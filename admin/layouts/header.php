@@ -1,7 +1,5 @@
 <?php
-    include "../config/connect.php";
-    include "../dao/pdo.php";
-    include "./dao/userDAO.php";
+    
     session_start();
 ?>
 
@@ -14,7 +12,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Main CSS-->
-  <!-- <link rel="stylesheet" type="text/css" href="/public/bootstrap.css"> -->
+  <link rel="stylesheet" type="text/css" href="/public/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="/admin/content-admin/css/main.css">
   <link rel="stylesheet" href="/content/css/login_re.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">

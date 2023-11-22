@@ -24,19 +24,18 @@
         return $count;
     }
  
-    function pdo_execute($sql)
- {
-    $sql_args = array_slice(func_get_args(), 1);
-    try {
-        $conn = connect_pdo();
-        $stmt = $conn->prepare($sql);
-        $stmt->execute($sql_args);
-    } catch (PDOException $e) {
-        throw $e;
-    } finally {
-        unset($conn);
+    function pdo_execute($sql){
+        $sql_args = array_slice(func_get_args(), 1);
+        try {
+            $conn = connect_pdo();
+            $stmt = $conn->prepare($sql);
+            $stmt->execute($sql_args);
+        } catch (PDOException $e) {
+            throw $e;
+        } finally {
+            unset($conn);
+        }
     }
-}
 // ===================Truy vấn nhiều dữ liệu=======================//
 function pdo_query($sql)
 {

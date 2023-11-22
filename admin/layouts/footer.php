@@ -4,7 +4,7 @@
 
   <!--===============================================================================================-->
   <script type="text/javascript">
-    var data = {
+    let data = {
       labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6"],
       datasets: [{
         label: "Dữ liệu đầu tiên",
@@ -28,17 +28,17 @@
       }
       ]
     };
-    var ctxl = $("#lineChartDemo").get(0).getContext("2d");
-    var lineChart = new Chart(ctxl).Line(data);
+    let ctxl = $("#lineChartDemo").get(0).getContext("2d");
+    let lineChart = new Chart(ctxl).Line(data);
 
-    var ctxb = $("#barChartDemo").get(0).getContext("2d");
-    var barChart = new Chart(ctxb).Bar(data);
+    let ctxb = $("#barChartDemo").get(0).getContext("2d");
+    let barChart = new Chart(ctxb).Bar(data);
   </script>
     <script type="text/javascript">
     //Thời Gian
     function time() {
-      var today = new Date();
-      var weekday = new Array(7);
+      let today = new Date();
+      let weekday = new Array(7);
       weekday[0] = "Chủ Nhật";
       weekday[1] = "Thứ Hai";
       weekday[2] = "Thứ Ba";
@@ -46,13 +46,13 @@
       weekday[4] = "Thứ Năm";
       weekday[5] = "Thứ Sáu";
       weekday[6] = "Thứ Bảy";
-      var day = weekday[today.getDay()];
-      var dd = today.getDate();
-      var mm = today.getMonth() + 1;
-      var yyyy = today.getFullYear();
-      var h = today.getHours();
-      var m = today.getMinutes();
-      var s = today.getSeconds();
+      let day = weekday[today.getDay()];
+      let dd = today.getDate();
+      let mm = today.getMonth() + 1;
+      let yyyy = today.getFullYear();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
       m = checkTime(m);
       s = checkTime(s);
       nowTime = h + " giờ " + m + " phút " + s + " giây";

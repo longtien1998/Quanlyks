@@ -12,15 +12,25 @@ function getUserById($id) {
 }
 
 function getUserByName($username) {
-    $sql = "SELECT * FROM useradmin WHERE username=$username";
+    $sql = "SELECT * FROM useradmin WHERE username=:username";
     $data = getDataWidthParams($sql, ["username"=>$username]);
     return $data;
 }
 
 function deleteUser($id) {
-    $sql = "DELETE FROM user WHERE id=:id";
-    $data = executeCUD($sql, ["id"=>$id]);
+    $sql = "DELETE FROM useradmin WHERE id=:id";
+    $data = pdo_execute($sql, ["id"=>$id]);
     var_dump($data);
+}
+function user_delete($id)
+{
+    $sql = "DELETE FROM useradmin WHERE id=?";
+    
+        $data = pdo_execute($sql, $id);
+        if($data>0){
+            var_dump($data);
+        }
+    
 }
 function adduseradmin($fullname, $username, $phone, $email, $password)
 {
